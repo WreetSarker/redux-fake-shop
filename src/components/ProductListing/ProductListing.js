@@ -8,8 +8,8 @@ const ProductListing = () => {
     const products = useSelector((state) => state);
     const dispatch = useDispatch();
 
-    const fetchProducts = async () => {
-        await fetch("http://fakestoreapi.com/products")
+    const fetchProducts = () => {
+        fetch("https://fakestoreapi.com/products")
             .then(resp => resp.json())
             .then(data => dispatch(setProducts(data)))
 

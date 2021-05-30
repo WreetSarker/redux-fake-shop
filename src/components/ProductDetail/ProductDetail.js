@@ -11,8 +11,8 @@ const ProductDetail = () => {
     const { image, title, price, category, description } = product;
     console.log(product);
 
-    const fetchProductDetail = async () => {
-        await fetch(`http://fakestoreapi.com/products/${productId}`)
+    const fetchProductDetail = () => {
+        fetch(`https://fakestoreapi.com/products/${productId}`)
             .then(resp => resp.json())
             .then(data => dispatch(selectedProduct(data)))
     }
